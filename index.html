@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAZ — Des idées aux résultats | Ideas into results — Montréal</title>
+<meta name="description" content="PAZ transforme les idées en solutions concrètes : apps iOS (A3 Atlas Scanner, FOTO Smart Photo Organizer) conçues et livrées à Montréal. No pitch. No noise. Just execution.">
+<meta name="keywords" content="PAZ, Montréal, exécution, studio, apps iOS, A3 Atlas Scanner, FOTO Smart Photo Organizer, LiDAR, photo organizer, execution studio, app developer">
+<meta name="author" content="PAZ">
+<link rel="canonical" href="https://paz.team/">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://paz.team/">
+<meta property="og:title" content="PAZ — Des idées aux résultats | Ideas into results">
+<meta property="og:description" content="No pitch. No noise. Just execution. — Pas de pitch. Pas de bruit. Juste l'exécution.">
+<meta property="og:image" content="https://paz.team/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://paz.team/og-image.png">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:locale:alternate" content="en_CA">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0c0c0d">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PAZ",
+  "url": "https://paz.team/",
+  "description": "PAZ turns ideas into real things. No pitch. No noise. Just execution.",
+  "email": "support@paz.team",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Montréal",
+    "addressRegion": "QC",
+    "addressCountry": "CA"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "PAZ Projects",
+  "itemListElement": [
+    {
+      "@type": "SoftwareApplication",
+      "position": 1,
+      "name": "A3 Atlas Scanner",
+      "operatingSystem": "iOS",
+      "applicationCategory": "ProductivityApplication",
+      "url": "https://apps.apple.com/us/app/a3-atlas-scanner/id6787545744",
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 2,
+      "name": "FOTO - Smart Photo Organizer",
+      "operatingSystem": "iOS",
+      "applicationCategory": "PhotoApplication",
+      "url": "https://apps.apple.com/us/app/foto-smart-photo-organizer/id6754541815",
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#0c0c0d;
+    --bg-soft:#141416;
+    --text:#f4f2ee;
+    --muted:#9a968f;
+    --accent:#e8ff47;
+    --line:#26262a;
+    --max:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+  }
+  ::selection{background:var(--accent);color:var(--bg)}
+
+  /* ---- language switching ---- */
+  html[data-lang="fr"] [lang="en"]{display:none}
+  html[data-lang="en"] [lang="fr"]{display:none}
+
+  /* ---- header ---- */
+  header{
+    position:fixed;inset:0 0 auto 0;z-index:10;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:20px 28px;
+    background:linear-gradient(to bottom,rgba(12,12,13,.92),rgba(12,12,13,0));
+    backdrop-filter:blur(6px);
+  }
+  .wordmark{
+    display:flex;align-items:center;gap:12px;
+    font-weight:800;font-size:1.2rem;letter-spacing:.35em;
+    color:var(--text);text-decoration:none;
+  }
+  .wordmark img{height:34px;width:auto;display:block}
+  .menu{display:flex;align-items:center;gap:26px}
+  .menu a{
+    color:var(--muted);text-decoration:none;font-size:.88rem;
+    letter-spacing:.12em;transition:color .2s;
+  }
+  .menu a:hover{color:var(--accent)}
+  .lang-toggle{
+    background:none;border:1px solid var(--line);color:var(--muted);
+    font:inherit;font-size:.8rem;letter-spacing:.15em;
+    padding:8px 16px;border-radius:999px;cursor:pointer;
+    transition:all .2s;
+  }
+  .lang-toggle:hover{border-color:var(--accent);color:var(--accent)}
+
+  section{max-width:var(--max);margin:0 auto;padding:110px 28px}
+
+  /* ---- hero ---- */
+  .hero{
+    min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+    padding-top:140px;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem,7.5vw,5.5rem);
+    font-weight:800;line-height:1.04;letter-spacing:-.02em;
+    max-width:14ch;
+  }
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero p.tag{
+    margin-top:28px;font-size:clamp(1.05rem,2vw,1.35rem);
+    color:var(--muted);max-width:38ch;
+  }
+  .hero .cta{
+    margin-top:44px;display:inline-block;width:max-content;
+    background:var(--accent);color:var(--bg);text-decoration:none;
+    font-weight:700;font-size:1rem;letter-spacing:.05em;
+    padding:16px 34px;border-radius:999px;
+    transition:transform .15s;
+  }
+  .hero .cta:hover{transform:translateY(-2px)}
+
+  /* ---- manifesto ---- */
+  .manifesto{border-top:1px solid var(--line)}
+  .manifesto p{
+    font-size:clamp(1.4rem,3.4vw,2.3rem);
+    font-weight:600;line-height:1.35;max-width:26ch;
+  }
+  .manifesto p strong{color:var(--accent);font-weight:700}
+
+  /* ---- pillars ---- */
+  .pillars{border-top:1px solid var(--line)}
+  .pillars h2, .contact h2{
+    font-size:.85rem;letter-spacing:.3em;color:var(--muted);
+    text-transform:uppercase;margin-bottom:52px;font-weight:600;
+  }
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+  .card{border-top:2px solid var(--accent);padding-top:22px}
+  .card .num{font-size:.8rem;color:var(--muted);letter-spacing:.2em}
+  .card h3{font-size:1.35rem;margin:10px 0 12px;font-weight:700}
+  .card p{color:var(--muted);font-size:.98rem}
+
+  /* ---- projects ---- */
+  .projects{border-top:1px solid var(--line)}
+  .projects h2{
+    font-size:.85rem;letter-spacing:.3em;color:var(--muted);
+    text-transform:uppercase;margin-bottom:18px;font-weight:600;
+  }
+  .projects .intro{color:var(--muted);margin-bottom:48px;max-width:52ch}
+  .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .proj{
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;
+    padding:34px 30px;display:flex;flex-direction:column;gap:14px;
+    transition:border-color .2s;
+  }
+  .proj:hover{border-color:var(--accent)}
+  .proj-tag{font-size:.72rem;letter-spacing:.22em;color:var(--muted)}
+  .proj h3{font-size:1.45rem;font-weight:800;letter-spacing:-.01em}
+  .proj p{color:var(--muted);font-size:.97rem;flex:1}
+  .proj .store{
+    color:var(--accent);text-decoration:none;font-weight:700;font-size:.95rem;
+    width:max-content;border-bottom:1.5px solid transparent;transition:border-color .2s;
+  }
+  .proj .store:hover{border-color:var(--accent)}
+  @media(max-width:720px){.proj-grid{grid-template-columns:1fr}}
+
+  /* ---- contact ---- */
+  .contact{border-top:1px solid var(--line)}
+  .contact .big{
+    font-size:clamp(1.8rem,4.5vw,3.2rem);font-weight:800;
+    line-height:1.15;letter-spacing:-.01em;margin-bottom:36px;max-width:20ch;
+  }
+  .contact a.mail{
+    color:var(--accent);text-decoration:none;font-size:clamp(1.1rem,2.4vw,1.6rem);
+    font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:3px;
+  }
+  .contact .loc{margin-top:40px;color:var(--muted);font-size:.95rem;letter-spacing:.1em}
+
+  footer{
+    border-top:1px solid var(--line);
+    max-width:var(--max);margin:0 auto;
+    padding:34px 28px;display:flex;justify-content:space-between;
+    color:var(--muted);font-size:.85rem;letter-spacing:.08em;
+  }
+
+  @media(max-width:720px){
+    .grid{grid-template-columns:1fr}
+    section{padding:80px 22px}
+    footer{flex-direction:column;gap:8px}
+  }
+  @media(prefers-reduced-motion:no-preference){
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+    .reveal.on{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="wordmark" href="#top"><img src="paz-logo-blanc.png" alt="Logo PAZ">PAZ</a>
+  <nav class="menu">
+    <a href="#projects" lang="fr">Projets</a>
+    <a href="#projects" lang="en">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 lang="fr">PAZ transforme les idées en <em>résultats.</em></h1>
+    <h1 lang="en">PAZ turns ideas into <em>real things.</em></h1>
+
+    <p class="tag" lang="fr">Pas de pitch. Pas de bruit. Juste l'exécution.</p>
+    <p class="tag" lang="en">No pitch. No noise. Just execution.</p>
+
+    <a class="cta" href="#contact" lang="fr">Bâtissons quelque chose</a>
+    <a class="cta" href="#contact" lang="en">Let's build something</a>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto reveal">
+    <p lang="fr">Nous identifions les vraies opportunités, assemblons les bons outils et les bonnes personnes, et exécutons avec clarté. <strong>Sans ego, sans distraction. Juste des résultats.</strong></p>
+    <p lang="en">We identify real opportunities, assemble the right tools and people, and execute with clarity. <strong>No ego, no noise, no distractions. Just results.</strong></p>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="pillars reveal">
+    <h2 lang="fr">Notre approche</h2>
+    <h2 lang="en">Our approach</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="num">01</div>
+        <h3 lang="fr">Identifier</h3>
+        <h3 lang="en">Identify</h3>
+        <p lang="fr">Repérer les opportunités réelles — pas les tendances, pas les modes. Ce qui mérite d'être construit.</p>
+        <p lang="en">Spot real opportunities — not trends, not hype. What actually deserves to be built.</p>
+      </div>
+      <div class="card">
+        <div class="num">02</div>
+        <h3 lang="fr">Assembler</h3>
+        <h3 lang="en">Assemble</h3>
+        <p lang="fr">Réunir les bons outils et les bonnes personnes. Rien de plus, rien de moins.</p>
+        <p lang="en">Bring together the right tools and the right people. Nothing more, nothing less.</p>
+      </div>
+      <div class="card">
+        <div class="num">03</div>
+        <h3 lang="fr">Exécuter</h3>
+        <h3 lang="en">Execute</h3>
+        <p lang="fr">Livrer avec clarté et discipline. Faire que les choses arrivent.</p>
+        <p lang="en">Deliver with clarity and discipline. Make things happen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects reveal" id="projects">
+    <h2 lang="fr">Projets</h2>
+    <h2 lang="en">Projects</h2>
+    <p class="intro" lang="fr">Des apps conçues, construites et livrées par PAZ — disponibles sur l'App Store.</p>
+    <p class="intro" lang="en">Apps designed, built and shipped by PAZ — available on the App Store.</p>
+    <div class="proj-grid">
+      <article class="proj">
+        <div class="proj-tag" lang="fr">PRODUCTIVITÉ · iPHONE &amp; iPAD</div>
+        <div class="proj-tag" lang="en">PRODUCTIVITY · iPHONE &amp; iPAD</div>
+        <h3>A3 Atlas Scanner</h3>
+        <p lang="fr">Numérisez une propriété pièce par pièce avec le LiDAR de votre iPhone : plans 2D style architecte, modèles 3D, surfaces et matériaux mesurés — jamais inventés. Export 100&nbsp;% hors ligne, bilingue, aucune collecte de données.</p>
+        <p lang="en">Scan a property room by room with your iPhone's LiDAR: blueprint-style 2D plans, 3D models, measured surfaces and materials — never invented. 100% offline export, bilingual, no data collection.</p>
+        <a class="store" href="https://apps.apple.com/us/app/a3-atlas-scanner/id6787545744" target="_blank" rel="noopener">
+          <span lang="fr">Voir sur l'App Store&nbsp;→</span><span lang="en">View on the App Store&nbsp;→</span>
+        </a>
+      </article>
+      <article class="proj">
+        <div class="proj-tag" lang="fr">PHOTO &amp; VIDÉO · iPHONE &amp; iPAD</div>
+        <div class="proj-tag" lang="en">PHOTO &amp; VIDEO · iPHONE &amp; iPAD</div>
+        <h3>FOTO — Smart Photo Organizer</h3>
+        <p lang="fr">Vos photos de chantier organisées automatiquement par projet et par emplacement GPS. Rapports PDF complets, sauvegarde Google Drive, fonctionne hors ligne. Gratuit et privé.</p>
+        <p lang="en">Your job-site photos automatically organized by project and GPS location. Complete PDF reports, Google Drive backup, works offline. Free and private.</p>
+        <a class="store" href="https://apps.apple.com/us/app/foto-smart-photo-organizer/id6754541815" target="_blank" rel="noopener">
+          <span lang="fr">Voir sur l'App Store&nbsp;→</span><span lang="en">View on the App Store&nbsp;→</span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact reveal" id="contact">
+    <h2 lang="fr">Contact</h2>
+    <h2 lang="en">Contact</h2>
+    <p class="big" lang="fr">Une idée? Parlons-en.</p>
+    <p class="big" lang="en">Got an idea? Let's talk.</p>
+    <a class="mail" href="mailto:support@paz.team">support@paz.team</a>
+    <p class="loc">MONTRÉAL · QUÉBEC · CANADA</p>
+  </section>
+
+</main>
+
+<footer>
+  <div>© 2026 PAZ</div>
+  <div lang="fr">Fait à Montréal.</div>
+  <div lang="en">Made in Montréal.</div>
+</footer>
+
+<script>
+  // Language: saved choice > browser language > French
+  const root = document.documentElement;
+  const saved = localStorage.getItem('paz-lang');
+  const initial = saved || (navigator.language && navigator.language.startsWith('en') ? 'en' : 'fr');
+  setLang(initial);
+
+  function setLang(l){
+    root.setAttribute('data-lang', l);
+    root.setAttribute('lang', l);
+    document.getElementById('langToggle').textContent = l === 'fr' ? 'EN' : 'FR';
+    localStorage.setItem('paz-lang', l);
+  }
+  document.getElementById('langToggle').addEventListener('click', () => {
+    setLang(root.getAttribute('data-lang') === 'fr' ? 'en' : 'fr');
+  });
+
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+  }, {threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
