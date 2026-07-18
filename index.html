@@ -176,6 +176,7 @@
   .projects .intro{color:var(--muted);margin-bottom:48px;max-width:52ch}
   .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
   .proj{
+    cursor:pointer;
     background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
     border:1px solid rgba(255,255,255,.09);border-radius:28px;
     padding:38px 36px;display:flex;flex-direction:column;gap:20px;
@@ -193,6 +194,12 @@
   }
   .proj-id h3{font-size:1.4rem;font-weight:700;letter-spacing:-.02em;line-height:1.2}
   .proj-tag{font-size:.75rem;letter-spacing:.14em;color:var(--muted);margin-top:5px;text-transform:uppercase}
+  .free-badge{
+    display:inline-block;margin-top:9px;
+    background:var(--accent);color:var(--bg);
+    font-size:.72rem;font-weight:800;letter-spacing:.14em;
+    padding:4px 12px;border-radius:999px;
+  }
   .proj p{color:var(--muted);font-size:.97rem;line-height:1.65;flex:1}
   .proj .store{
     display:inline-flex;align-items:center;gap:8px;width:max-content;
@@ -307,13 +314,15 @@
     <p class="intro" lang="fr">Des apps conçues, construites et livrées par PAZ — disponibles sur l'App Store.</p>
     <p class="intro" lang="en">Apps designed, built and shipped by PAZ — available on the App Store.</p>
     <div class="proj-grid">
-      <article class="proj">
+      <article class="proj" data-href="https://apps.apple.com/us/app/a3-atlas-scanner/id6787545744">
         <div class="proj-head">
           <img class="proj-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ff/20/65/ff206588-444f-7820-bc01-e65a21bbde0d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="Icône A3 Atlas Scanner" width="84" height="84" loading="lazy">
           <div class="proj-id">
             <h3>A3 Atlas Scanner</h3>
-            <div class="proj-tag" lang="fr">Productivité · iPhone &amp; iPad · Gratuit</div>
-            <div class="proj-tag" lang="en">Productivity · iPhone &amp; iPad · Free</div>
+            <div class="proj-tag" lang="fr">Productivité · iPhone &amp; iPad</div>
+            <div class="proj-tag" lang="en">Productivity · iPhone &amp; iPad</div>
+            <span class="free-badge" lang="fr">GRATUIT</span>
+            <span class="free-badge" lang="en">FREE</span>
           </div>
         </div>
         <p lang="fr">Numérisez une propriété pièce par pièce avec le LiDAR de votre iPhone : plans 2D style architecte, modèles 3D, surfaces et matériaux mesurés — jamais inventés. Export 100&nbsp;% hors ligne, bilingue, aucune collecte de données.</p>
@@ -323,13 +332,15 @@
           <span lang="fr">Télécharger sur l'App&nbsp;Store</span><span lang="en">Download on the App&nbsp;Store</span>
         </a>
       </article>
-      <article class="proj">
+      <article class="proj" data-href="https://apps.apple.com/us/app/foto-smart-photo-organizer/id6754541815">
         <div class="proj-head">
           <img class="proj-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/29/71/51/297151a8-220c-36bf-073a-5370beed874c/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="Icône FOTO Smart Photo Organizer" width="84" height="84" loading="lazy">
           <div class="proj-id">
             <h3>FOTO — Smart Photo Organizer</h3>
-            <div class="proj-tag" lang="fr">Photo &amp; vidéo · iPhone &amp; iPad · Gratuit</div>
-            <div class="proj-tag" lang="en">Photo &amp; Video · iPhone &amp; iPad · Free</div>
+            <div class="proj-tag" lang="fr">Photo &amp; vidéo · iPhone &amp; iPad</div>
+            <div class="proj-tag" lang="en">Photo &amp; Video · iPhone &amp; iPad</div>
+            <span class="free-badge" lang="fr">GRATUIT</span>
+            <span class="free-badge" lang="en">FREE</span>
           </div>
         </div>
         <p lang="fr">Vos photos de chantier organisées automatiquement par projet et par emplacement GPS. Rapports PDF complets, sauvegarde Google Drive, fonctionne hors ligne. Gratuit et privé.</p>
@@ -375,6 +386,14 @@
   }
   document.getElementById('langToggle').addEventListener('click', () => {
     setLang(root.getAttribute('data-lang') === 'fr' ? 'en' : 'fr');
+  });
+
+  // Cartes projets entièrement cliquables (desktop + mobile)
+  document.querySelectorAll('.proj[data-href]').forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.closest('a')) return; // le bouton garde son comportement
+      window.open(card.dataset.href, '_blank', 'noopener');
+    });
   });
 
   // Scroll reveal
