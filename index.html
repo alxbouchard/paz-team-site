@@ -83,7 +83,7 @@
   body{
     background:var(--bg);
     color:var(--text);
-    font-family:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-font-smoothing:antialiased;
     line-height:1.6;
   }
@@ -176,20 +176,38 @@
   .projects .intro{color:var(--muted);margin-bottom:48px;max-width:52ch}
   .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
   .proj{
-    background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;
-    padding:34px 30px;display:flex;flex-direction:column;gap:14px;
-    transition:border-color .2s;
+    background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.09);border-radius:28px;
+    padding:38px 36px;display:flex;flex-direction:column;gap:20px;
+    transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
   }
-  .proj:hover{border-color:var(--accent)}
-  .proj-tag{font-size:.72rem;letter-spacing:.22em;color:var(--muted)}
-  .proj h3{font-size:1.45rem;font-weight:800;letter-spacing:-.01em}
-  .proj p{color:var(--muted);font-size:.97rem;flex:1}
+  .proj:hover{
+    transform:translateY(-5px);
+    border-color:rgba(255,255,255,.18);
+    box-shadow:0 24px 48px rgba(0,0,0,.5);
+  }
+  .proj-head{display:flex;align-items:center;gap:20px}
+  .proj-icon{
+    width:84px;height:84px;border-radius:20px;flex-shrink:0;
+    box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08);
+  }
+  .proj-id h3{font-size:1.4rem;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+  .proj-tag{font-size:.75rem;letter-spacing:.14em;color:var(--muted);margin-top:5px;text-transform:uppercase}
+  .proj p{color:var(--muted);font-size:.97rem;line-height:1.65;flex:1}
   .proj .store{
-    color:var(--accent);text-decoration:none;font-weight:700;font-size:.95rem;
-    width:max-content;border-bottom:1.5px solid transparent;transition:border-color .2s;
+    display:inline-flex;align-items:center;gap:8px;width:max-content;
+    background:#0071e3;color:#fff;text-decoration:none;
+    font-weight:600;font-size:.95rem;letter-spacing:.01em;
+    padding:12px 24px;border-radius:999px;
+    transition:background .2s;
   }
-  .proj .store:hover{border-color:var(--accent)}
-  @media(max-width:720px){.proj-grid{grid-template-columns:1fr}}
+  .proj .store:hover{background:#0077ed}
+  .proj .store svg{width:15px;height:18px;display:block}
+  @media(max-width:720px){
+    .proj-grid{grid-template-columns:1fr}
+    .proj{padding:30px 26px}
+    .proj-icon{width:68px;height:68px;border-radius:16px}
+  }
 
   /* ---- contact ---- */
   .contact{border-top:1px solid var(--line)}
@@ -290,23 +308,35 @@
     <p class="intro" lang="en">Apps designed, built and shipped by PAZ — available on the App Store.</p>
     <div class="proj-grid">
       <article class="proj">
-        <div class="proj-tag" lang="fr">PRODUCTIVITÉ · iPHONE &amp; iPAD</div>
-        <div class="proj-tag" lang="en">PRODUCTIVITY · iPHONE &amp; iPAD</div>
-        <h3>A3 Atlas Scanner</h3>
+        <div class="proj-head">
+          <img class="proj-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ff/20/65/ff206588-444f-7820-bc01-e65a21bbde0d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="Icône A3 Atlas Scanner" width="84" height="84" loading="lazy">
+          <div class="proj-id">
+            <h3>A3 Atlas Scanner</h3>
+            <div class="proj-tag" lang="fr">Productivité · iPhone &amp; iPad · Gratuit</div>
+            <div class="proj-tag" lang="en">Productivity · iPhone &amp; iPad · Free</div>
+          </div>
+        </div>
         <p lang="fr">Numérisez une propriété pièce par pièce avec le LiDAR de votre iPhone : plans 2D style architecte, modèles 3D, surfaces et matériaux mesurés — jamais inventés. Export 100&nbsp;% hors ligne, bilingue, aucune collecte de données.</p>
         <p lang="en">Scan a property room by room with your iPhone's LiDAR: blueprint-style 2D plans, 3D models, measured surfaces and materials — never invented. 100% offline export, bilingual, no data collection.</p>
         <a class="store" href="https://apps.apple.com/us/app/a3-atlas-scanner/id6787545744" target="_blank" rel="noopener">
-          <span lang="fr">Voir sur l'App Store&nbsp;→</span><span lang="en">View on the App Store&nbsp;→</span>
+          <svg viewBox="0 0 15 18" fill="currentColor" aria-hidden="true"><path d="M12.44 9.56c.02 2.4 2.1 3.2 2.12 3.21-.02.06-.33 1.14-1.1 2.25-.66.96-1.35 1.92-2.44 1.94-1.07.02-1.41-.63-2.63-.63s-1.6.61-2.61.65c-1.05.04-1.85-1.04-2.52-2-1.37-1.98-2.42-5.6-1.01-8.04.7-1.21 1.95-1.98 3.3-2 1.03-.02 2 .69 2.63.69.63 0 1.81-.85 3.05-.73.52.02 1.98.21 2.92 1.58-.08.05-1.74 1.02-1.71 3.08zM10.41 3.4c.56-.68.93-1.62.83-2.55-.8.03-1.77.53-2.34 1.2-.52.6-.97 1.56-.85 2.48.89.07 1.8-.45 2.36-1.13z"/></svg>
+          <span lang="fr">Télécharger sur l'App&nbsp;Store</span><span lang="en">Download on the App&nbsp;Store</span>
         </a>
       </article>
       <article class="proj">
-        <div class="proj-tag" lang="fr">PHOTO &amp; VIDÉO · iPHONE &amp; iPAD</div>
-        <div class="proj-tag" lang="en">PHOTO &amp; VIDEO · iPHONE &amp; iPAD</div>
-        <h3>FOTO — Smart Photo Organizer</h3>
+        <div class="proj-head">
+          <img class="proj-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/29/71/51/297151a8-220c-36bf-073a-5370beed874c/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="Icône FOTO Smart Photo Organizer" width="84" height="84" loading="lazy">
+          <div class="proj-id">
+            <h3>FOTO — Smart Photo Organizer</h3>
+            <div class="proj-tag" lang="fr">Photo &amp; vidéo · iPhone &amp; iPad · Gratuit</div>
+            <div class="proj-tag" lang="en">Photo &amp; Video · iPhone &amp; iPad · Free</div>
+          </div>
+        </div>
         <p lang="fr">Vos photos de chantier organisées automatiquement par projet et par emplacement GPS. Rapports PDF complets, sauvegarde Google Drive, fonctionne hors ligne. Gratuit et privé.</p>
         <p lang="en">Your job-site photos automatically organized by project and GPS location. Complete PDF reports, Google Drive backup, works offline. Free and private.</p>
         <a class="store" href="https://apps.apple.com/us/app/foto-smart-photo-organizer/id6754541815" target="_blank" rel="noopener">
-          <span lang="fr">Voir sur l'App Store&nbsp;→</span><span lang="en">View on the App Store&nbsp;→</span>
+          <svg viewBox="0 0 15 18" fill="currentColor" aria-hidden="true"><path d="M12.44 9.56c.02 2.4 2.1 3.2 2.12 3.21-.02.06-.33 1.14-1.1 2.25-.66.96-1.35 1.92-2.44 1.94-1.07.02-1.41-.63-2.63-.63s-1.6.61-2.61.65c-1.05.04-1.85-1.04-2.52-2-1.37-1.98-2.42-5.6-1.01-8.04.7-1.21 1.95-1.98 3.3-2 1.03-.02 2 .69 2.63.69.63 0 1.81-.85 3.05-.73.52.02 1.98.21 2.92 1.58-.08.05-1.74 1.02-1.71 3.08zM10.41 3.4c.56-.68.93-1.62.83-2.55-.8.03-1.77.53-2.34 1.2-.52.6-.97 1.56-.85 2.48.89.07 1.8-.45 2.36-1.13z"/></svg>
+          <span lang="fr">Télécharger sur l'App&nbsp;Store</span><span lang="en">Download on the App&nbsp;Store</span>
         </a>
       </article>
     </div>
