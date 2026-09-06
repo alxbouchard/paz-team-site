@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PAZ — Des idées aux résultats | Ideas into results — Montréal</title>
-<meta name="description" content="PAZ transforme les idées en solutions concrètes : apps iOS (A3 Atlas Scanner, FOTO Smart Photo Organizer) conçues et livrées à Montréal. No pitch. No noise. Just execution.">
-<meta name="keywords" content="PAZ, Montréal, exécution, studio, apps iOS, A3 Atlas Scanner, FOTO Smart Photo Organizer, LiDAR, photo organizer, execution studio, app developer">
+<meta name="description" content="PAZ transforme les idées en solutions concrètes : apps iOS (A3 Atlas Scanner, FOTO Smart Photo Organizer, Moments) conçues et livrées à Montréal. No pitch. No noise. Just execution.">
+<meta name="keywords" content="PAZ, Montréal, exécution, studio, apps iOS, A3 Atlas Scanner, FOTO Smart Photo Organizer, Moments Photos en famille, proche aidant, LiDAR, photo organizer, execution studio, app developer">
 <meta name="author" content="PAZ">
 <link rel="canonical" href="https://paz.team/">
 <link rel="icon" href="favicon.ico" sizes="48x48">
@@ -64,6 +64,15 @@
       "applicationCategory": "PhotoApplication",
       "url": "https://apps.apple.com/us/app/foto-smart-photo-organizer/id6754541815",
       "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 3,
+      "name": "Moments – Photos en famille",
+      "operatingSystem": "iOS",
+      "applicationCategory": "LifestyleApplication",
+      "url": "https://apps.apple.com/ca/app/moments-photos-en-famille/id6804938053",
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"}
     }
   ]
 }
@@ -174,12 +183,13 @@
     text-transform:uppercase;margin-bottom:18px;font-weight:600;
   }
   .projects .intro{color:var(--muted);margin-bottom:48px;max-width:52ch}
-  .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:960px){.proj-grid{grid-template-columns:1fr 1fr;gap:28px}}
   .proj{
     cursor:pointer;
     background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
     border:1px solid rgba(255,255,255,.09);border-radius:28px;
-    padding:38px 36px;display:flex;flex-direction:column;gap:20px;
+    padding:32px 28px;display:flex;flex-direction:column;gap:20px;
     transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
   }
   .proj:hover{
@@ -189,10 +199,10 @@
   }
   .proj-head{display:flex;align-items:center;gap:20px}
   .proj-icon{
-    width:84px;height:84px;border-radius:20px;flex-shrink:0;
+    width:72px;height:72px;border-radius:18px;flex-shrink:0;
     box-shadow:0 8px 24px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08);
   }
-  .proj-id h3{font-size:1.4rem;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+  .proj-id h3{font-size:1.25rem;font-weight:700;letter-spacing:-.02em;line-height:1.2}
   .proj-tag{font-size:.75rem;letter-spacing:.14em;color:var(--muted);margin-top:5px;text-transform:uppercase}
   .free-badge{
     display:inline-block;margin-top:9px;
@@ -316,7 +326,7 @@
     <div class="proj-grid">
       <article class="proj" data-href="https://apps.apple.com/us/app/a3-atlas-scanner/id6787545744">
         <div class="proj-head">
-          <img class="proj-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ff/20/65/ff206588-444f-7820-bc01-e65a21bbde0d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="Icône A3 Atlas Scanner" width="84" height="84" loading="lazy">
+          <img class="proj-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ff/20/65/ff206588-444f-7820-bc01-e65a21bbde0d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="Icône A3 Atlas Scanner" width="72" height="72" loading="lazy">
           <div class="proj-id">
             <h3>A3 Atlas Scanner</h3>
             <div class="proj-tag" lang="fr">Productivité · iPhone &amp; iPad</div>
@@ -334,7 +344,7 @@
       </article>
       <article class="proj" data-href="https://apps.apple.com/us/app/foto-smart-photo-organizer/id6754541815">
         <div class="proj-head">
-          <img class="proj-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/29/71/51/297151a8-220c-36bf-073a-5370beed874c/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="Icône FOTO Smart Photo Organizer" width="84" height="84" loading="lazy">
+          <img class="proj-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/29/71/51/297151a8-220c-36bf-073a-5370beed874c/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="Icône FOTO Smart Photo Organizer" width="72" height="72" loading="lazy">
           <div class="proj-id">
             <h3>FOTO — Smart Photo Organizer</h3>
             <div class="proj-tag" lang="fr">Photo &amp; vidéo · iPhone &amp; iPad</div>
@@ -346,6 +356,24 @@
         <p lang="fr">Vos photos de chantier organisées automatiquement par projet et par emplacement GPS. Rapports PDF complets, sauvegarde Google Drive, fonctionne hors ligne. Gratuit et privé.</p>
         <p lang="en">Your job-site photos automatically organized by project and GPS location. Complete PDF reports, Google Drive backup, works offline. Free and private.</p>
         <a class="store" href="https://apps.apple.com/us/app/foto-smart-photo-organizer/id6754541815" target="_blank" rel="noopener">
+          <svg viewBox="0 0 15 18" fill="currentColor" aria-hidden="true"><path d="M12.44 9.56c.02 2.4 2.1 3.2 2.12 3.21-.02.06-.33 1.14-1.1 2.25-.66.96-1.35 1.92-2.44 1.94-1.07.02-1.41-.63-2.63-.63s-1.6.61-2.61.65c-1.05.04-1.85-1.04-2.52-2-1.37-1.98-2.42-5.6-1.01-8.04.7-1.21 1.95-1.98 3.3-2 1.03-.02 2 .69 2.63.69.63 0 1.81-.85 3.05-.73.52.02 1.98.21 2.92 1.58-.08.05-1.74 1.02-1.71 3.08zM10.41 3.4c.56-.68.93-1.62.83-2.55-.8.03-1.77.53-2.34 1.2-.52.6-.97 1.56-.85 2.48.89.07 1.8-.45 2.36-1.13z"/></svg>
+          <span lang="fr">Télécharger sur l'App&nbsp;Store</span><span lang="en">Download on the App&nbsp;Store</span>
+        </a>
+      </article>
+      <article class="proj" data-href="https://apps.apple.com/ca/app/moments-photos-en-famille/id6804938053">
+        <div class="proj-head">
+          <img class="proj-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3b/50/d6/3b50d67d-eeee-a220-1569-b46dd5ef5b69/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="Icône Moments — Photos en famille" width="72" height="72" loading="lazy">
+          <div class="proj-id">
+            <h3>Moments — Photos en famille</h3>
+            <div class="proj-tag" lang="fr">Style de vie · iPhone &amp; iPad</div>
+            <div class="proj-tag" lang="en">Lifestyle · iPhone &amp; iPad</div>
+            <span class="free-badge" lang="fr">GRATUIT</span>
+            <span class="free-badge" lang="en">FREE</span>
+          </div>
+        </div>
+        <p lang="fr">Pour les proches aidants et les personnes aidées. Un espace calme avec de très grands boutons : photos envoyées par la famille, musique choisie, solitaire relaxant, cadre photo. Le proche aidant jumelle l'appareil par code QR et envoie des photos depuis le portail familial sécurisé. Sans publicité, hors ligne.</p>
+        <p lang="en">For caregivers and the people they care for. A calm space with very large buttons: photos sent by family, chosen music, relaxing solitaire, photo frame. The caregiver pairs the device with a QR code and sends photos from the secure family portal. No ads, works offline.</p>
+        <a class="store" href="https://apps.apple.com/ca/app/moments-photos-en-famille/id6804938053" target="_blank" rel="noopener">
           <svg viewBox="0 0 15 18" fill="currentColor" aria-hidden="true"><path d="M12.44 9.56c.02 2.4 2.1 3.2 2.12 3.21-.02.06-.33 1.14-1.1 2.25-.66.96-1.35 1.92-2.44 1.94-1.07.02-1.41-.63-2.63-.63s-1.6.61-2.61.65c-1.05.04-1.85-1.04-2.52-2-1.37-1.98-2.42-5.6-1.01-8.04.7-1.21 1.95-1.98 3.3-2 1.03-.02 2 .69 2.63.69.63 0 1.81-.85 3.05-.73.52.02 1.98.21 2.92 1.58-.08.05-1.74 1.02-1.71 3.08zM10.41 3.4c.56-.68.93-1.62.83-2.55-.8.03-1.77.53-2.34 1.2-.52.6-.97 1.56-.85 2.48.89.07 1.8-.45 2.36-1.13z"/></svg>
           <span lang="fr">Télécharger sur l'App&nbsp;Store</span><span lang="en">Download on the App&nbsp;Store</span>
         </a>
