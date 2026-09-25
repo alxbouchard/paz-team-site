@@ -80,7 +80,7 @@
       "position": 4,
       "name": "Option Plomberie",
       "url": "https://optionplomberie.ca",
-      "description": "Site web client mis en ligne par PAZ en 15 minutes, avec l'agent IA OpenClaw « Luigi » (plomberie : facturation, suivi des courriels, assistance terrain) joignable par Telegram.",
+      "description": "Deux livrables PAZ pour Option Plomberie : le site web (en ligne en 15 minutes, SEO local, fiche Google Business) et l'agent IA OpenClaw « Luigi » sur Telegram (facturation, suivi des courriels, assistance technique sur le terrain).",
       "creator": {"@type": "Organization", "name": "PAZ", "url": "https://paz.team"}
     },
     {
@@ -88,7 +88,7 @@
       "position": 5,
       "name": "Omerco",
       "url": "https://omerco.com",
-      "description": "Site web client mis en ligne par PAZ en 15 minutes, avec l'agent IA OpenClaw « Omer » (analyse de plans de construction) joignable par Telegram, et réseaux sociaux gérés par agents IA.",
+      "description": "Deux livrables PAZ pour Omerco : le site web (en ligne en 15 minutes, SEO local, fiche Google Business) et l'agent IA OpenClaw « Omer » sur Telegram (analyse de plans de construction), plus réseaux sociaux gérés par agents IA.",
       "creator": {"@type": "Organization", "name": "PAZ", "url": "https://paz.team"}
     }
   ]
@@ -254,6 +254,14 @@
     font-size:.72rem;font-weight:800;letter-spacing:.14em;
     padding:4px 12px;border-radius:999px;
   }
+  .proj .deliv{display:flex;flex-direction:column;gap:14px;flex:1}
+  .proj .deliv-item{border-top:1px solid rgba(255,255,255,.09);padding-top:14px}
+  .proj .deliv-k{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--text);font-weight:700;font-size:.95rem;margin-bottom:6px}
+  .proj .deliv-k svg{width:16px;height:16px;flex-shrink:0;color:var(--accent)}
+  .proj .deliv-k .speed-badge{margin:0 0 0 auto;font-size:.66rem;padding:3px 10px}
+  .proj .deliv-k .tg{margin-left:auto;font-size:.72rem;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+  .proj .deliv p{flex:none;font-size:.93rem;line-height:1.6}
+  .proj .deliv .deliv-extra{margin-top:6px;color:var(--text)}
   .proj .proj-note{color:var(--text);font-size:.9rem;line-height:1.55;flex:0;border-left:2px solid var(--accent);padding-left:12px}
   @media(max-width:720px){
     .proj-grid{grid-template-columns:1fr}
@@ -362,8 +370,8 @@
   <section class="projects reveal" id="projects">
     <h2 lang="fr">Projets</h2>
     <h2 lang="en">Projects</h2>
-    <p class="intro" lang="fr">Des apps et des sites conçus, construits et livrés par PAZ. Les sites clients sont mis en ligne en 15 minutes&nbsp;: domaine, DNS Cloudflare, site, SEO et fiche Google Business. Chaque client a aussi son agent IA OpenClaw, qu'il joint par Telegram.</p>
-    <p class="intro" lang="en">Apps and websites designed, built and shipped by PAZ. Client sites go live in 15 minutes: domain, Cloudflare DNS, site, SEO and Google Business listing. Each client also gets an OpenClaw AI agent, reachable on Telegram.</p>
+    <p class="intro" lang="fr">Des apps conçues, construites et livrées par PAZ. Pour nos clients&nbsp;: un site web mis en ligne en 15 minutes (domaine, DNS Cloudflare, SEO, fiche Google Business) et un agent IA OpenClaw sur mesure, qu'ils joignent par Telegram.</p>
+    <p class="intro" lang="en">Apps designed, built and shipped by PAZ. For our clients: a website live in 15 minutes (domain, Cloudflare DNS, SEO, Google Business listing) and a custom OpenClaw AI agent they reach on Telegram.</p>
     <div class="proj-grid">
       <article class="proj" data-href="https://apps.apple.com/us/app/a3-atlas-scanner/id6787545744">
         <div class="proj-head">
@@ -424,16 +432,22 @@
           <img class="proj-icon" src="https://optionplomberie.ca/apple-touch-icon.png" alt="Logo Option Plomberie" width="72" height="72" loading="lazy">
           <div class="proj-id">
             <h3>Option Plomberie</h3>
-            <div class="proj-tag" lang="fr">Site web · Client</div>
-            <div class="proj-tag" lang="en">Website · Client</div>
-            <span class="speed-badge" lang="fr">15 MINUTES</span>
-            <span class="speed-badge" lang="en">15 MINUTES</span>
+            <div class="proj-tag" lang="fr">Client · Site web + agent IA</div>
+            <div class="proj-tag" lang="en">Client · Website + AI agent</div>
           </div>
         </div>
-        <p lang="fr">Site d'un plombier de Montréal : urgences 24/7, spécialiste du cuivre à Westmount. Rapide, pensé pour le référencement local.</p>
-        <p lang="en">Website for a Montréal plumber: 24/7 emergencies, copper specialist in Westmount. Fast, built for local search.</p>
-        <p class="proj-note" lang="fr">Agent IA «&nbsp;Luigi&nbsp;», spécialisé en plomberie&nbsp;: facturation au quotidien, suivi des courriels et assistance technique sur le terrain.</p>
-        <p class="proj-note" lang="en">AI agent “Luigi”, a plumbing specialist: day-to-day invoicing, email follow-up and on-site technical support.</p>
+        <div class="deliv">
+          <div class="deliv-item">
+            <div class="deliv-k"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c1.8 1.8 2.7 4 2.7 6.5S9.8 12.7 8 14.5C6.2 12.7 5.3 10.5 5.3 8S6.2 3.3 8 1.5z"/></svg><span lang="fr">Site web</span><span lang="en">Website</span><span class="speed-badge">15 MIN</span></div>
+            <p lang="fr">Plombier de Montréal&nbsp;: urgences 24/7, spécialiste du cuivre à Westmount. SEO local et fiche Google Business.</p>
+            <p lang="en">Montréal plumber: 24/7 emergencies, copper specialist in Westmount. Local SEO and Google Business listing.</p>
+          </div>
+          <div class="deliv-item">
+            <div class="deliv-k"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="5" width="11" height="8" rx="2.5"/><path d="M8 2.5V5M6 9h.01M10 9h.01"/></svg><span lang="fr">Agent IA «&nbsp;Luigi&nbsp;»</span><span lang="en">AI agent “Luigi”</span><span class="tg">Telegram</span></div>
+            <p lang="fr">Spécialisé en plomberie&nbsp;: facturation au quotidien, suivi des courriels et assistance technique sur le terrain.</p>
+            <p lang="en">Plumbing specialist: day-to-day invoicing, email follow-up and on-site technical support.</p>
+          </div>
+        </div>
         <a class="store web" href="https://optionplomberie.ca" target="_blank" rel="noopener">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c1.8 1.8 2.7 4 2.7 6.5S9.8 12.7 8 14.5C6.2 12.7 5.3 10.5 5.3 8S6.2 3.3 8 1.5z"/></svg>
           <span lang="fr">Voir le site</span><span lang="en">Visit the site</span>
@@ -444,16 +458,24 @@
           <img class="proj-icon" src="https://omerco.com/apple-touch-icon.png" alt="Logo Omerco" width="72" height="72" loading="lazy">
           <div class="proj-id">
             <h3>Omerco</h3>
-            <div class="proj-tag" lang="fr">Site web · Client</div>
-            <div class="proj-tag" lang="en">Website · Client</div>
-            <span class="speed-badge" lang="fr">15 MINUTES</span>
-            <span class="speed-badge" lang="en">15 MINUTES</span>
+            <div class="proj-tag" lang="fr">Client · Site web + agent IA</div>
+            <div class="proj-tag" lang="en">Client · Website + AI agent</div>
           </div>
         </div>
-        <p lang="fr">Site de la maison modulaire VL-A3 : 947&nbsp;pi², 2 chambres, conçue pour le Québec et le marché canadien. Pensé pour le référencement local.</p>
-        <p lang="en">Website for the VL-A3 modular home: 947&nbsp;sq&nbsp;ft, 2 bedrooms, designed for Québec and the Canadian market. Built for local search.</p>
-        <p class="proj-note" lang="fr">Agent IA «&nbsp;Omer&nbsp;», spécialiste de l'analyse et de la compréhension de plans de construction. En plus&nbsp;: réseaux sociaux gérés par agents IA.</p>
-        <p class="proj-note" lang="en">AI agent “Omer”, a specialist in reading and understanding construction plans. Plus: social media managed by AI agents.</p>
+        <div class="deliv">
+          <div class="deliv-item">
+            <div class="deliv-k"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c1.8 1.8 2.7 4 2.7 6.5S9.8 12.7 8 14.5C6.2 12.7 5.3 10.5 5.3 8S6.2 3.3 8 1.5z"/></svg><span lang="fr">Site web</span><span lang="en">Website</span><span class="speed-badge">15 MIN</span></div>
+            <p lang="fr">Maison modulaire VL-A3&nbsp;: 947&nbsp;pi², 2 chambres, conçue pour le Québec. SEO local et fiche Google Business.</p>
+            <p lang="en">VL-A3 modular home: 947&nbsp;sq&nbsp;ft, 2 bedrooms, designed for Québec. Local SEO and Google Business listing.</p>
+          </div>
+          <div class="deliv-item">
+            <div class="deliv-k"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="5" width="11" height="8" rx="2.5"/><path d="M8 2.5V5M6 9h.01M10 9h.01"/></svg><span lang="fr">Agent IA «&nbsp;Omer&nbsp;»</span><span lang="en">AI agent “Omer”</span><span class="tg">Telegram</span></div>
+            <p lang="fr">Spécialiste de l'analyse et de la compréhension de plans de construction.</p>
+            <p lang="en">Specialist in reading and understanding construction plans.</p>
+              <p class="deliv-extra" lang="fr">En plus&nbsp;: réseaux sociaux gérés par agents IA.</p>
+              <p class="deliv-extra" lang="en">Plus: social media managed by AI agents.</p>
+          </div>
+        </div>
         <a class="store web" href="https://omerco.com" target="_blank" rel="noopener">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c1.8 1.8 2.7 4 2.7 6.5S9.8 12.7 8 14.5C6.2 12.7 5.3 10.5 5.3 8S6.2 3.3 8 1.5z"/></svg>
           <span lang="fr">Voir le site</span><span lang="en">Visit the site</span>
