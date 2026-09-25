@@ -33,6 +33,7 @@
   "url": "https://paz.team/",
   "description": "PAZ turns ideas into real things. No pitch. No noise. Just execution.",
   "email": "support@paz.team",
+  "sameAs": ["https://x.com/paz_al3x"],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Montréal",
@@ -145,6 +146,14 @@
     transition:all .2s;
   }
   .lang-toggle:hover{border-color:var(--accent);color:var(--accent)}
+  .menu a.x-link{display:flex;align-items:center;padding:4px}
+  .x-link svg{width:17px;height:17px;display:block}
+  .contact .xline{margin-top:28px;color:var(--muted);font-size:1rem}
+  .contact .xline a{color:var(--text);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .2s,border-color .2s}
+  .contact .xline a:hover{color:var(--accent);border-color:var(--accent)}
+  .contact .xline svg{width:15px;height:15px}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
 
   section{max-width:var(--max);margin:0 auto;padding:110px 28px}
 
@@ -275,6 +284,11 @@
     .grid{grid-template-columns:1fr}
     section{padding:80px 22px}
     footer{flex-direction:column;gap:8px}
+    header{padding:16px 18px}
+    .wordmark{letter-spacing:.25em;gap:10px}
+    .menu{gap:16px}
+    .menu a{letter-spacing:.06em}
+    .lang-toggle{padding:7px 12px}
   }
   @media(prefers-reduced-motion:no-preference){
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
@@ -290,6 +304,7 @@
     <a href="#projects" lang="fr">Projets</a>
     <a href="#projects" lang="en">Projects</a>
     <a href="#contact">Contact</a>
+    <a class="x-link" href="https://x.com/paz_al3x" target="_blank" rel="me noopener" aria-label="PAZ sur X (@paz_al3x)" title="@paz_al3x"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
     <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
   </nav>
 </header>
@@ -454,13 +469,15 @@
     <p class="big" lang="fr">Une idée? Parlons-en.</p>
     <p class="big" lang="en">Got an idea? Let's talk.</p>
     <a class="mail" href="mailto:support@paz.team">support@paz.team</a>
+    <p class="xline" lang="fr">Je partage mon travail en continu sur <a href="https://x.com/paz_al3x" target="_blank" rel="me noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@paz_al3x</a></p>
+    <p class="xline" lang="en">I share my work as it happens on <a href="https://x.com/paz_al3x" target="_blank" rel="me noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@paz_al3x</a></p>
     <p class="loc">MONTRÉAL · QUÉBEC · CANADA</p>
   </section>
 
 </main>
 
 <footer>
-  <div>© 2026 PAZ</div>
+  <div>© 2026 PAZ · <a href="https://x.com/paz_al3x" target="_blank" rel="me noopener">X @paz_al3x</a></div>
   <div lang="fr">Fait à Montréal.</div>
   <div lang="en">Made in Montréal.</div>
 </footer>
