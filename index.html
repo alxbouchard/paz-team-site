@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PAZ — Des idées aux résultats | Ideas into results — Montréal</title>
-<meta name="description" content="PAZ transforme les idées en solutions concrètes : apps iOS (A3 Atlas Scanner, FOTO Smart Photo Organizer, Moments) conçues et livrées à Montréal. No pitch. No noise. Just execution.">
-<meta name="keywords" content="PAZ, Montréal, exécution, studio, apps iOS, A3 Atlas Scanner, FOTO Smart Photo Organizer, Moments Photos en famille, proche aidant, LiDAR, photo organizer, execution studio, app developer">
+<meta name="description" content="PAZ transforme les idées en solutions concrètes : apps iOS (A3 Atlas Scanner, FOTO Smart Photo Organizer, Moments) et sites web clients (Option Plomberie) conçus et livrés à Montréal. No pitch. No noise. Just execution.">
+<meta name="keywords" content="PAZ, Montréal, exécution, studio, apps iOS, A3 Atlas Scanner, FOTO Smart Photo Organizer, Moments Photos en famille, proche aidant, Option Plomberie, site web, Cloudflare, SEO local, LiDAR, photo organizer, execution studio, app developer">
 <meta name="author" content="PAZ">
 <link rel="canonical" href="https://paz.team/">
 <link rel="icon" href="favicon.ico" sizes="48x48">
@@ -73,6 +73,14 @@
       "applicationCategory": "LifestyleApplication",
       "url": "https://apps.apple.com/ca/app/moments-photos-en-famille/id6804938053",
       "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"}
+    },
+    {
+      "@type": "WebSite",
+      "position": 4,
+      "name": "Option Plomberie",
+      "url": "https://optionplomberie.ca",
+      "description": "Site web client conçu et mis en ligne par PAZ en 15 minutes : domaine, DNS Cloudflare, site, SEO de base et fiche Google Business.",
+      "creator": {"@type": "Organization", "name": "PAZ", "url": "https://paz.team"}
     }
   ]
 }
@@ -220,6 +228,16 @@
   }
   .proj .store:hover{background:#0077ed}
   .proj .store svg{width:15px;height:18px;display:block}
+  .proj .store.web{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1px rgba(255,255,255,.28)}
+  .proj .store.web:hover{background:rgba(255,255,255,.08)}
+  .proj .store.web svg{width:16px;height:16px}
+  .speed-badge{
+    display:inline-block;margin-top:9px;
+    color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);
+    font-size:.72rem;font-weight:800;letter-spacing:.14em;
+    padding:4px 12px;border-radius:999px;
+  }
+  .proj .proj-note{color:var(--text);font-size:.9rem;line-height:1.55;flex:0;border-left:2px solid var(--accent);padding-left:12px}
   @media(max-width:720px){
     .proj-grid{grid-template-columns:1fr}
     .proj{padding:30px 26px}
@@ -321,8 +339,8 @@
   <section class="projects reveal" id="projects">
     <h2 lang="fr">Projets</h2>
     <h2 lang="en">Projects</h2>
-    <p class="intro" lang="fr">Des apps conçues, construites et livrées par PAZ — disponibles sur l'App Store.</p>
-    <p class="intro" lang="en">Apps designed, built and shipped by PAZ — available on the App Store.</p>
+    <p class="intro" lang="fr">Des apps et des sites conçus, construits et livrés par PAZ.</p>
+    <p class="intro" lang="en">Apps and websites designed, built and shipped by PAZ.</p>
     <div class="proj-grid">
       <article class="proj" data-href="https://apps.apple.com/us/app/a3-atlas-scanner/id6787545744">
         <div class="proj-head">
@@ -376,6 +394,26 @@
         <a class="store" href="https://apps.apple.com/ca/app/moments-photos-en-famille/id6804938053" target="_blank" rel="noopener">
           <svg viewBox="0 0 15 18" fill="currentColor" aria-hidden="true"><path d="M12.44 9.56c.02 2.4 2.1 3.2 2.12 3.21-.02.06-.33 1.14-1.1 2.25-.66.96-1.35 1.92-2.44 1.94-1.07.02-1.41-.63-2.63-.63s-1.6.61-2.61.65c-1.05.04-1.85-1.04-2.52-2-1.37-1.98-2.42-5.6-1.01-8.04.7-1.21 1.95-1.98 3.3-2 1.03-.02 2 .69 2.63.69.63 0 1.81-.85 3.05-.73.52.02 1.98.21 2.92 1.58-.08.05-1.74 1.02-1.71 3.08zM10.41 3.4c.56-.68.93-1.62.83-2.55-.8.03-1.77.53-2.34 1.2-.52.6-.97 1.56-.85 2.48.89.07 1.8-.45 2.36-1.13z"/></svg>
           <span lang="fr">Télécharger sur l'App&nbsp;Store</span><span lang="en">Download on the App&nbsp;Store</span>
+        </a>
+      </article>
+      <article class="proj" data-href="https://optionplomberie.ca">
+        <div class="proj-head">
+          <img class="proj-icon" src="https://optionplomberie.ca/apple-touch-icon.png" alt="Logo Option Plomberie" width="72" height="72" loading="lazy">
+          <div class="proj-id">
+            <h3>Option Plomberie</h3>
+            <div class="proj-tag" lang="fr">Site web · Client</div>
+            <div class="proj-tag" lang="en">Website · Client</div>
+            <span class="speed-badge" lang="fr">15 MINUTES</span>
+            <span class="speed-badge" lang="en">15 MINUTES</span>
+          </div>
+        </div>
+        <p lang="fr">Site d'un plombier de Montréal : urgences 24/7, spécialiste du cuivre à Westmount. Rapide, pensé pour le référencement local.</p>
+        <p lang="en">Website for a Montréal plumber: 24/7 emergencies, copper specialist in Westmount. Fast, built for local search.</p>
+        <p class="proj-note" lang="fr">Conçu et mis en ligne en 15 minutes&nbsp;: achat du domaine, DNS Cloudflare, site, SEO de base et fiche Google Business.</p>
+        <p class="proj-note" lang="en">Designed and launched in 15 minutes: domain purchase, Cloudflare DNS, site, basic SEO and Google Business listing.</p>
+        <a class="store web" href="https://optionplomberie.ca" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c1.8 1.8 2.7 4 2.7 6.5S9.8 12.7 8 14.5C6.2 12.7 5.3 10.5 5.3 8S6.2 3.3 8 1.5z"/></svg>
+          <span lang="fr">Voir le site</span><span lang="en">Visit the site</span>
         </a>
       </article>
     </div>
